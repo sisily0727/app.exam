@@ -2,19 +2,19 @@ import java.util.Scanner;
 
 public class Exam {
     public static void main(String[] args) {
-        //입력 값을 저장할 변수 선언
-        int a;
-        //입력을 받기 위해 준비
-        Scanner kb = new Scanner(System.in);
-        //사용자로부터 입력을 받아 변수에 저장
-        a = kb.nextInt();
-        //횟수를 저장하는 변수 num 생성 후 횟수를 0으로 저장
-        int num = 0;
-        //10번 반복하여 출력
-        while (num < 10) {
-            num++;
-            System.out.print(num*a + " ");
-        }
+        Vender myVender = new Vender();
+        Vender myVender2 =  new Vender();
+
+        //돈입력
+        myVender.inputMoney();
+        //커피 선택
+        myVender.selectTea();
+        //커피 만들기
+        myVender.makeTea(myVender.tea);
+        //잔돈 계산하기
+        int return_money = myVender.returnMoney(myVender.tea,myVender.user_money);
+        //잔돈 출력하기
+        System.out.println(return_money);
     }
 }
 //-------------------------------------------------------------------------------------------------------------
@@ -88,5 +88,21 @@ public class Exam {
         //곱셈한 결과 값을 리턴(도출)
         return result;
     }
+        */
+//-------------------------------------------------------------------------------------------------------------
+        /*
+        //입력 값을 저장할 변수 선언
+        int a;
+        //입력을 받기 위해 준비
+        Scanner kb = new Scanner(System.in);
+        //사용자로부터 입력을 받아 변수에 저장
+        a = kb.nextInt();
+        //횟수를 저장하는 변수 num 생성 후 횟수를 0으로 저장
+        int num = 0;
+        //10번 반복하여 출력
+        while (num < 10) {
+            num++;
+            System.out.print(num*a + " ");
+        }
         */
 
